@@ -1,0 +1,38 @@
+[project]
+name = "pygame-cli"
+version = "0.9.1"
+authors = [{ name = "AntonisDevStuff", email = "contact@antonisdevstuff.com" }]
+description = "A CLI module for pygame Community Edition."
+keywords = ["pygame", "cli", "project manager"]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pygame-ce>=2.5.0",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: pygame",
+]
+[project.urls]
+Repository = "https://github.com/antonisdevstuff/pygame-cli"
+Issues = "https://github.com/antonisdevstuff/pygame-cli/issues"
+Releases = "https://github.com/antonisdevstuff/pygame-cli/releases"
+
+[project.scripts]
+pygame = "pygame_cli.__main__:main"
+
+[tool.setuptools]
+package-dir = { "pygame_cli" = "src" }
+packages = [
+    "pygame_cli"
+]
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
