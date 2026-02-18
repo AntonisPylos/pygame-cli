@@ -1,8 +1,8 @@
-# pygame-manager
-![PyPI - Version](https://img.shields.io/pypi/v/pygame-manager)
-![Tests](https://img.shields.io/github/actions/workflow/status/AntonisPylos/pygame-manager/run_tests.yml)
-![License](https://img.shields.io/github/license/AntonisPylos/pygame-manager)
-![PyPI - Status](https://img.shields.io/pypi/status/pygame-manager)
+# pygame-cli
+![PyPI - Version](https://img.shields.io/pypi/v/pygame-cli)
+![Tests](https://img.shields.io/github/actions/workflow/status/AntonisPylos/pygame-cli/run_tests.yml)
+![License](https://img.shields.io/github/license/AntonisPylos/pygame-cli)
+![PyPI - Status](https://img.shields.io/pypi/status/pygame-cli)
 
 A CLI project management tool for pygame community edition.
 
@@ -18,7 +18,7 @@ A CLI project management tool for pygame community edition.
 
 Install:
 ```bash
-pip install pygame-manager
+pip install pygame-cli
 ```
 
 Basic Example:
@@ -51,4 +51,3 @@ You can use any of these aliases: `pygame` `pygame-ce` `pgce`
 
 This project is licensed under the MIT License.
 See the [`LICENSE.txt`](LICENSE.txt) file for the full license text.
-

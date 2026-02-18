@@ -1,4 +1,4 @@
-# This is a practical test script for the pygame-manager library.
+# This is a practical test script for the pygame-cli library.
 
 import sys
 import os
