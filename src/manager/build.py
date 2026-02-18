@@ -167,7 +167,11 @@ def local_build(args):
 
     metadata = info(args)
     app_name = metadata["name"]
+    if not app_name:
+        app_name = "Game"
     app_version = metadata["version"]
+    if not app_version:
+        app_version = "1.0.0"
 
     build_dir = os.path.abspath("build")
 
