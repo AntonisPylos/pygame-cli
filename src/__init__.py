@@ -1,7 +1,9 @@
-import pygame
+from importlib.metadata import version as _version
 
-if not getattr(pygame, "IS_CE", False):
-    raise ImportError(
-        "Pygame-CLI requires the Pygame Community Edition (pygame-ce). "
-        "Please install it and ensure you are not using legacy pygame."
-    )
+__version__ = _version("pygame-manager")
+
+__project__ = "pygame-manager"
+__author__ = "AntonisPylos"
+__license__ = "MIT"
+
+version = __version__

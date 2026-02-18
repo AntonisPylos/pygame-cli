@@ -1,13 +1,15 @@
 [project]
-name = "pygame-cli"
-version = "0.9.1"
-authors = [{ name = "AntonisDevStuff", email = "contact@antonisdevstuff.com" }]
-description = "A CLI module for pygame Community Edition."
+name = "pygame_manager"
+version = "1.0.0"
+authors = [{ name = "AntonisPylos", email = "antonis@pylos.dev" }]
+description = "A CLI project management library for pygame community edition."
 keywords = ["pygame", "cli", "project manager"]
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "pygame-ce>=2.5.0",
+    "appdirs==1.4.4",
+    "cx_Freeze == 8.5.3",
+    "GitPython == 3.1.46"
 ]
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
@@ -20,18 +22,23 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: pygame",
 ]
 [project.urls]
-Repository = "https://github.com/antonisdevstuff/pygame-cli"
-Issues = "https://github.com/antonisdevstuff/pygame-cli/issues"
-Releases = "https://github.com/antonisdevstuff/pygame-cli/releases"
+Repository = "https://github.com/AntonisPylos/pygame-manager"
+Issues = "https://github.com/AntonisPylos/pygame-manager/issues"
+Releases = "https://github.com/AntonisPylos/pygame-manager/releases"
 
 [project.scripts]
-pygame = "pygame_cli.__main__:main"
+pygame = "pygame_manager.__main__:main"
+pygame-ce = "pygame_manager.__main__:main"
+pgce = "pygame_manager.__main__:main"
 
 [tool.setuptools]
-package-dir = { "pygame_cli" = "src" }
+package-dir = { "pygame_manager" = "src" }
 packages = [
-    "pygame_cli"
+    "pygame_manager"
 ]
+
+[tool.setuptools.package-data]
+pygame_manager = ["template/**"]
 
 [build-system]
 requires = ["setuptools>=61", "wheel"]
