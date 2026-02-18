@@ -12,9 +12,22 @@ A CLI project management tool for pygame community edition.
 - Manage multiple projects via the terminal
 - Run projects locally or in browser (pygbag)
 - Build projects for distribution (cx_Freeze)
-- Clone projects directly from Git repositories 
+- Clone projects directly from Git repositories
 
 ## Getting Started
+Requirements:
+```bash
+# Windows
+winget install --id Git.Git -e --source winget
+
+# Linux (Debian,Fedora,Arch)
+sudo apt install git patchelf
+sudo dnf install git patchelf
+sudo pacman -S git patchelf
+
+# macOS
+brew install git
+```
 
 Install:
 ```bash
@@ -51,3 +64,4 @@ You can use any of these aliases: `pygame` `pygame-ce` `pgce`
 
 This project is licensed under the MIT License.
 See the [`LICENSE.txt`](LICENSE.txt) file for the full license text.
+
