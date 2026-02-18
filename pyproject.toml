@@ -1,6 +1,6 @@
 [project]
 name = "pygame_cli"
-version = "1.0.0"
+version = "1.0.1"
 authors = [{ name = "AntonisPylos", email = "antonis@pylos.dev" }]
 description = "A CLI project management library for pygame community edition."
 keywords = ["pygame", "cli", "project "]
