@@ -34,7 +34,8 @@ pgce = "pygame_cli.__main__:main"
 [tool.setuptools]
 package-dir = { "pygame_cli" = "src" }
 packages = [
-    "pygame_cli"
+    "pygame_cli",
+    "pygame_cli.manager"
 ]
 
 [tool.setuptools.package-data]
