@@ -1,5 +1,6 @@
 # pygame-manager
 ![PyPI - Version](https://img.shields.io/pypi/v/pygame-manager)
+![Tests](https://img.shields.io/github/actions/workflow/status/AntonisPylos/pygame-manager/run_tests.yml)
 ![License](https://img.shields.io/github/license/AntonisPylos/pygame-manager)
 ![PyPI - Status](https://img.shields.io/pypi/status/pygame-manager)
 
@@ -50,3 +51,4 @@ You can use any of these aliases: `pygame` `pygame-ce` `pgce`
 
 This project is licensed under the MIT License.
 See the [`LICENSE.txt`](LICENSE.txt) file for the full license text.
+
