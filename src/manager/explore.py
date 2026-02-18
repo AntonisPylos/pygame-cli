@@ -31,7 +31,12 @@ def explore_projects(args: Any) -> Optional[str]:
         cmd = ["xdg-open", str(project_path)]
 
     try:
-        subprocess.run(cmd, check=False)
+        subprocess.run(
+            cmd,
+            check=False,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
         return str(project_path)
     except Exception as exc:
         print(f"Failed to open project '{name}': {exc}")

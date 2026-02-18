@@ -256,7 +256,7 @@ def local_build(args):
         elif item.endswith(".py") and item != "main.py":
             project_modules.append(item[:-3])  # Remove .py extension
 
-    print(f"\tFound {len(project_modules)} dependencies: {includes}")
+    print(f"\tFound {len(includes)} dependencies: {includes}")
     print(f"\tFound {len(project_packages)} packages: {project_packages}")
     print(f"\tFound {len(project_modules)} modules: {project_modules}")
 
