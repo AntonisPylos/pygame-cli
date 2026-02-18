@@ -173,7 +173,7 @@ def local_build(args):
 
     # Determine executable type
     if sys.platform == "win32":
-        base = "'Win32GUI'"
+        base = "'gui'"
         target_name = f"{app_name}.exe"
     else:
         base = "None"
