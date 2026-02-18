@@ -14,7 +14,7 @@ dependencies = [
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Operating System :: Microsoft :: Windows",
     "Operating System :: POSIX :: Linux",
     "Operating System :: MacOS",
