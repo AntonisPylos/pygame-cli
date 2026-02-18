@@ -16,15 +16,13 @@ try:
     print("[1] Testing get_projects_path...")
     projects_path = get_projects_path()
     assert os.path.exists(projects_path)
-    print(f"    ✓ Projects path: {projects_path}")
 
-    print("\n[2] Testing _validate_name with valid names...")
+    print("[2] Testing _validate_name with valid names...")
     _validate_name("my_project")
     _validate_name("test123")
     _validate_name("valid-name")
-    print("    ✓ Valid names accepted")
 
-    print("\n[3] Testing _validate_name with invalid names...")
+    print("[3] Testing _validate_name with invalid names...")
     invalid_names = [
         ("", "empty string"),
         (".", "dot"),
@@ -41,34 +39,28 @@ try:
             sys.exit(1)
         except ValueError:
             pass
-    print("    ✓ Invalid names rejected")
 
-    print("\n[4] Testing get_path...")
+    print("[4] Testing get_path...")
     test_path = get_path("test_project")
     assert "test_project" in test_path
     assert not os.path.exists(test_path)
-    print(f"    ✓ Got path: {test_path}")
 
-    print("\n[5] Testing create_path...")
+    print("[5] Testing create_path...")
     created_path = create_path("test_project_created")
     assert os.path.exists(created_path)
-    print(f"    ✓ Created path: {created_path}")
 
-    print("\n[6] Testing valid_project on non-existent project...")
+    print("[6] Testing valid_project on non-existent project...")
     assert not valid_project("nonexistent_project")
-    print("    ✓ Non-existent project is invalid")
 
-    print("\n[7] Testing valid_project on incomplete project...")
+    print("[7] Testing valid_project on incomplete project...")
     assert not valid_project("test_project_created")
-    print("    ✓ Incomplete project is invalid")
 
-    print("\n[8] Cleaning up test directory...")
+    print("[8] Cleaning up test directory...")
     import shutil
     if os.path.exists(created_path):
         shutil.rmtree(created_path)
-    print("    ✓ Cleaned up")
 
-    print("\n[PASS] All path tests completed successfully. No errors detected.")
+    print("[PASS] Test complete. No errors detected.")
     sys.exit(0)
 
 except Exception as e:
