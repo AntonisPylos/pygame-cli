@@ -339,13 +339,11 @@ def local_build(args):
 
     print(f"[3/5] Copying project assets...")
 
-    copied_count = 0
 
-    # Blacklist: files you don't want to move
-    blacklist = [
-        "main.py", ".env", ".gitignore", "requirements.txt",
-        "metadata.json", ".git", "__pycache__"
-    ]
+    # Data folders
+    whitelist = {
+        "assets", "data"
+    }
 
     copied_count = 0
 
@@ -353,14 +351,13 @@ def local_build(args):
         src = os.path.join(project_path, item)
         dst = os.path.join(build_dir, item)
 
-        # skip blacklisted files
-        if os.path.isfile(src) and item not in blacklist:
+        if os.path.isdir(src) and item.lower() in whitelist:
             try:
-                shutil.move(src, dst)
-                print(f"\t✓ Moved {item}")
+                shutil.copytree(src, dst)
+                print(f"\t✓ Moved {item}/")
                 copied_count += 1
             except Exception as e:
-                print(f"\t✗ Failed to move {item}: {e}")
+                print(f"\t✗ Failed to move {item}/: {e}")
 
     print(f"Total files moved: {copied_count}")
 
